@@ -108,6 +108,8 @@ h1 {
   height: 62px;
   width: 345px;
   justify-content: space-between;
+  background-color: #f9fafb;
+  border-radius: 6px;
 }
 .task__delete {
   height: 30px;
@@ -116,6 +118,7 @@ h1 {
   background-color: #fef2f2;
   color: #ef4444;
   border-radius: 6px;
+  margin-right: 16px;
 }
 
 #input::placeholder {
@@ -124,6 +127,7 @@ h1 {
 .buttons {
   display: flex;
   gap: 10px;
+  margin-left: 16px;
 }
 #task__container {
   display: flex;
