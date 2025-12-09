@@ -27,9 +27,15 @@
             <button class="addButton">Add</button>
           </div>
           <div class="status">
-            <button class="button1">All</button>
-            <button class="button2">Active</button>
-            <button class="button3">Completed</button>
+            <button class="button1" id="all" onclick="buttonColor()">
+              All
+            </button>
+            <button class="button2" id="active" onclick="buttonColorr()">
+              Active
+            </button>
+            <button class="button3" id="completed" onclick="buttonColorrr()">
+              Completed
+            </button>
           </div>
 
           <div id="task__container"></div>
@@ -38,7 +44,9 @@
           <p>Powered by Chinguun</p>
         </div>
       </div>
+      <button style="background-color: aliceblue; color: white"></button>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
