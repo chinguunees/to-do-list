@@ -4,6 +4,7 @@ const tasksContainer = document.querySelector("#task__container");
 const allButton = document.querySelector("#all");
 const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
+const tasksList = document.querySelector("#taskList");
 
 const tasks = [];
 
@@ -55,6 +56,11 @@ const noTask = () => {
             <p>No tasks yet. Add one above!</p>
           </div>`;
   }
+  if (tasks.length >= 1) {
+    tasksList.innerHTML = `<div class="statusText">
+            <p> ${tasks.length} tasks yet. Add one above!</p>
+          </div>`;
+  }
 };
 const renderTasks = () => {
   let taskElementHTML = "";
@@ -64,6 +70,7 @@ const renderTasks = () => {
   });
 
   tasksContainer.innerHTML = taskElementHTML;
+  taskAllList();
 };
 const toggleComplete = (id) => {
   const task = tasks.find((t) => t.id === id);
@@ -94,6 +101,9 @@ const deleteTask = (id) => {
   renderTasks();
   noTask();
 };
+const taskAllList = () => {
+  tasksList.innerHTML = `<p>${tasks.length} tasks added</p>`;
+};
 const buttonColor = () => {
   allButton.innerHTML = `<button class="button1" style="background-color: #3c82f6; color: white;">All</button>`;
   activeButton.innerHTML = `<button class="button2">Active</button>`;
@@ -110,7 +120,7 @@ const buttonColorrr = () => {
   activeButton.innerHTML = `<button class="button2">Active</button>`;
 };
 noTask();
-
+taskAllList();
 addElement.addEventListener("click", add);
 allButton.addEventListener("click", () => filterTasks("all"));
 activeButton.addEventListener("click", () => filterTasks("active"));
