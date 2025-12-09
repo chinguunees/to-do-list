@@ -84,7 +84,9 @@ const createTaskElement = (task) => {
               class="task__checkbox" 
               ${task.isComplete && "checked"}
               onclick="toggleComplete(${task.id})"/>
-              <p class="task__text">${task.text}</p></div>
+              <p class="task__text  ${task.isComplete && "line"}">${
+    task.text
+  }</p></div>
               <button class="task__delete" onclick="deleteTask(${
                 task.id
               })">Delete</button>
@@ -121,6 +123,11 @@ const buttonColorrr = () => {
 };
 noTask();
 taskAllList();
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    add();
+  }
+});
 addElement.addEventListener("click", add);
 allButton.addEventListener("click", () => filterTasks("all"));
 activeButton.addEventListener("click", () => filterTasks("active"));

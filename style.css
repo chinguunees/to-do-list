@@ -22,7 +22,7 @@
   border-radius: 18px;
   background-color: white;
   border: 0;
-  box-shadow: 2px 2px 3px #777777;
+  /* box-shadow: 1px 1px 1px #777777; */
 }
 .inputArea {
   display: flex;
@@ -141,4 +141,7 @@ h1 {
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
+}
+.line {
+  text-decoration: line-through;
 }
