@@ -36,6 +36,7 @@
   height: 40px;
   border-radius: 6px;
   border: 0.5px solid grey;
+  padding-left: 6px;
 }
 .addButton {
   height: 40px;
@@ -139,6 +140,9 @@ h1 {
   border-radius: 6px;
   margin-right: 16px;
 }
+.task__delete:hover {
+  background-color: #ffd60a;
+}
 
 #input::placeholder {
   text-align: center;
@@ -156,10 +160,27 @@ h1 {
 }
 #taskList {
   color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
 }
+
 .line {
   text-decoration: line-through;
+}
+.delete_all {
+  height: 30px;
+  width: 120px;
+  border: 0;
+  background-color: #fef2f2;
+  color: #ef4444;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+.delete_all:hover {
+  background-color: #ffd60a;
 }

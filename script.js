@@ -5,8 +5,9 @@ const allButton = document.querySelector("#all");
 const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
 const tasksList = document.querySelector("#taskList");
+const testrinho = document.querySelector(".testerino");
 
-const tasks = [];
+let tasks = [];
 
 let taskId = 1;
 
@@ -72,11 +73,13 @@ const renderTasks = () => {
   tasksContainer.innerHTML = taskElementHTML;
   taskAllList();
 };
+
 const toggleComplete = (id) => {
   const task = tasks.find((t) => t.id === id);
   task.isComplete = !task.isComplete;
   renderTasks();
 };
+
 const createTaskElement = (task) => {
   return ` <div class="task">
               <div class="buttons">
@@ -103,8 +106,14 @@ const deleteTask = (id) => {
   renderTasks();
   noTask();
 };
+const taskos = () => {
+  tasks = tasks.filter((task) => !task.isComplete);
+  renderTasks(tasks);
+  taskAllList();
+};
 const taskAllList = () => {
-  tasksList.innerHTML = `<p>${tasks.length} tasks added</p>`;
+  taskCompleted = tasks.filter((task) => task.isComplete).length;
+  tasksList.innerHTML = `<p>${taskCompleted} of ${tasks.length} tasks completed</p> <button class="delete_all" onclick="taskos()">Clear Completed</button>`;
 };
 const buttonColor = () => {
   allButton.innerHTML = `<button class="button1" style="background-color: #3c82f6; color: white;">All</button>`;
@@ -123,6 +132,7 @@ const buttonColorrr = () => {
 };
 noTask();
 taskAllList();
+
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     add();
