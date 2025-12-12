@@ -12,7 +12,7 @@ let tasks = [];
 let taskId = 1;
 
 const add = () => {
-  const todoText = input.value;
+  const todoText = input.value.trim();
   const task = {
     id: taskId,
     text: todoText,
