@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
 }
-#wholeBody {
+body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
   background-color: #8ecae6;
   width: 100%;
   height: 100%;
