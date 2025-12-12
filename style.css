@@ -144,7 +144,7 @@ h1 {
 }
 
 #input::placeholder {
-  text-align: center;
+  text-align: start;
 }
 .buttons {
   display: flex;
@@ -162,10 +162,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 20px;
+  gap: 40px;
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
+  border-top: 1px;
+  border-color: #777777;
 }
 
 .line {

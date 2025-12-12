@@ -113,8 +113,10 @@ const taskos = () => {
 };
 const taskAllList = () => {
   taskCompleted = tasks.filter((task) => task.isComplete).length;
-  tasksList.innerHTML = `<p>${taskCompleted} of ${tasks.length} tasks completed</p> <button class="delete_all" onclick="taskos()">Clear Completed</button>`;
+  if (tasks.length >= 1)
+    tasksList.innerHTML = `<p>${taskCompleted} of ${tasks.length} tasks completed</p> <button class="delete_all" onclick="taskos()">Clear Completed</button>`;
 };
+
 const buttonColor = () => {
   allButton.innerHTML = `<button class="button1" style="background-color: #3c82f6; color: white;">All</button>`;
   activeButton.innerHTML = `<button class="button2">Active</button>`;
