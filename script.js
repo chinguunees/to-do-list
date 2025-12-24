@@ -114,7 +114,7 @@ const taskos = () => {
 const taskAllList = () => {
   taskCompleted = tasks.filter((task) => task.isComplete).length;
   if (tasks.length >= 1)
-    tasksList.innerHTML = `<p>${taskCompleted} of ${tasks.length} tasks completed</p> <button class="delete_all" onclick="taskos()">Clear Completed</button>`;
+    tasksList.innerHTML = `<div class="shineDelete"><p>${taskCompleted} of ${tasks.length} tasks completed</p> <button class="delete_all" onclick="taskos()">Clear Completed</button></div>`;
 };
 
 const buttonColor = () => {
